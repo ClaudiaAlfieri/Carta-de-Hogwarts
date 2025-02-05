@@ -1,120 +1,169 @@
 body,
-#magic,
-#letter {
-    cursor: none;
-}
+        #magic,
+        #letter {
+            cursor: none;
+        }
 
-.fundo {
-    background-color: black;
-    height: 100vh;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-}
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            padding: 0 15px;
+        }
 
-/* Mensagem texto */
+        .fundo {
+            background-color: black;
+            min-height: 100vh;
+            width: 100%;
+        }
 
-#message {
-    display: none; 
-    margin: auto; 
-    text-align: center;
-    font-size: 1px; 
-    color: black;
-    background-image: url("paper.jpg");
-    background-size: cover;
-    width: 90px;
-    font-family: "Mali", serif;
-    padding: 30px 0;
-    justify-content: center; 
-    margin-bottom: 20px;
-}
+        /* Mensagem texto */
+        #message {
+            display: none;
+            margin: auto;
+            text-align: center;
+            font-size: 1px;
+            color: black;
+            background-image: url("paper.jpg");
+            background-size: cover;
+            width: 90px;
+            font-family: "Mali", serif;
+            padding: 30px 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-#message.enlarged {
-    font-size: 20px;
-    background-size: cover;
-    color: black;
-    width: 900px;
-    padding: 40px 0px;
-    transition: all 0.7s ease-in-out;
-    margin-bottom: 10px;
-}
+        #message.enlarged {
+            font-size: 16px;
+            background-size: cover;
+            color: black;
+            width: 100%;
+            max-width: 1500px;
+            padding: 40px 20px;
+            transition: all 0.7s ease-in-out;
+            margin-bottom: 10px;
+        }
 
+        /* Varinha mágica */
+        .varinha {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url("varinha.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform-origin: center;
+            pointer-events: none;
+            z-index: 9999;
+        }
 
-/* Varinha mágica */
+        .particle {
+            position: absolute;
+            animation: fadeOut 2s forwards;
+        }
 
-.varinha {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-image: url("varinha.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform-origin: center;
-    pointer-events: none;
-    z-index: 9999;
-}
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
 
-.particle {
-    position: absolute;
-    animation: fadeOut 2s forwards;
-}
+        /* Botão - Open the letter */
+        #letter {
+            margin: auto;
+            font-family: helvetica;
+            font-weight: bold;
+            padding: 10px 20px;
+            font-size: calc(18px + 0.5vw);
+            background-color: #642b7d;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            align-items: center;
+            display: none;
+            margin-top: 5px;
+            width: auto;
+            max-width: 100%;
+        }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-}
+        #letter:hover {
+            background-color: #975baf;
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(255, 255, 255, 1);
+        }
 
-/* Botão - Open the letter */
+        /* Botão - Let the magic begin */
+        #magic, #music {
+            margin: auto;
+            font-family: helvetica;
+            font-weight: bold;
+            padding: 10px 20px;
+            font-size: calc(18px + 0.5vw);
+            background-color: #3c0544;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.674);
+            transition: all 0.3s ease;
+            align-items: center;
+            margin-top: 5px;
+            width: auto;
+            max-width: 100%;
+        }
 
-#letter {
-    margin: auto;
-    font-family: helvetica;
-    font-weight: bold;
-    padding: 10px 30px;
-    font-size: 30px;
-    background-color: #642b7d;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
-    align-items: center;
-    display: none;
-    margin-top: 5px;
-    
-}
-#letter:hover {
-    background-color: #975baf;
-    transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(255, 255, 255, 1);
-}
+        #magic:hover, #music:hover {
+            background-color: #700966;
+            transform: scale(1.05);
+            box-shadow: 0 0 45px rgba(255, 255, 255, 1);
+        }
 
-/* Botão - Let the magic begin */
+        /* Video responsivo */
+        #video {
+            max-width: 100%;
+            height: auto;
+        }
 
-#magic, #music{ 
-    margin: auto;
-    font-family: helvetica;
-    font-weight: bold;
-    padding: 10px 30px;
-    font-size: 30px;
-    background-color: #3c0544;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.674);
-    transition: all 0.3s ease;
-    align-items: center;
-    margin-top: 5px;
-} 
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .varinha {
+                width: 150px;
+                height: 150px;
+            }
 
-#magic:hover, #music:hover {
-    background-color: #700966;
-    transform: scale(1.05);
-    box-shadow: 0 0 45px rgba(255, 255, 255, 1);
-}
+            #message.enlarged {
+                font-size: 14px;
+                padding: 30px 15px;
+            }
+
+            #magic, #music, #letter {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .varinha {
+                width: 100px;
+                height: 100px;
+            }
+
+            #message.enlarged {
+                font-size: 12px;
+                padding: 20px 10px;
+            }
+
+            #magic, #music, #letter {
+                padding: 6px 12px;
+                font-size: 16px;
+            }
+        }
