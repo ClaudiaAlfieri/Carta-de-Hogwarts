@@ -30,20 +30,6 @@ An interactive experience inspired by the Harry Potter universe, where users can
 - **JavaScript** - DOM manipulation and interactivity
 - **Bootstrap** - Framework for responsive layout
 
-## 📁 Project Files
-
-```
-├── index.html        # Main HTML structure
-├── style.css         # Styles and animations
-├── script.js         # JavaScript functionalities and DOM manipulation
-├── harry_potter.mp3  # Harry Potter theme music
-├── fireworks1.mp3    # Fireworks sound
-├── corte_hp.mp4      # Introduction video
-├── varinha.png       # Magic wand image
-├── paper.jpg         # Paper texture for the letter
-└── hp.gif            # Animation displayed after opening the letter
-```
-
 ## 🚀 How To Use
 
 1. Clone the repository:
